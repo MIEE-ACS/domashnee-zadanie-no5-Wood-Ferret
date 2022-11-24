@@ -81,7 +81,7 @@ namespace dz5_2
             if(error==false)
             {
                 
-                this.Close();
+                this.DialogResult = true;
             }
 
         }
@@ -89,7 +89,7 @@ namespace dz5_2
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             
-            this.Close();
+            this.DialogResult=false;
         }
         
     }

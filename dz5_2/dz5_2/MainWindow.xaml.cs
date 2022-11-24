@@ -140,13 +140,16 @@ namespace dz5_2
             var window = new changeWindow();
             window.Owner = this;
             window.ShowDialog();
-            company[window.number - 1].SetCountry = window.country;
-            company[window.number - 1].SetRegion = window.region;
-            company[window.number - 1].SetCity = window.city;
-            company[window.number - 1].SetStreet = window.street;
-            company[window.number - 1].SetHouse = window.house;
-            company[window.number - 1].SetIndex = window.index;
-            update();
+            if (window.DialogResult == true)
+            {
+                company[window.number - 1].SetCountry = window.country;
+                company[window.number - 1].SetRegion = window.region;
+                company[window.number - 1].SetCity = window.city;
+                company[window.number - 1].SetStreet = window.street;
+                company[window.number - 1].SetHouse = window.house;
+                company[window.number - 1].SetIndex = window.index;
+                update();
+            }
         }
 
     }
